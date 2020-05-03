@@ -41,7 +41,10 @@ namespace auth.Controllers
                     claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity),
                     authProperties);
-                return RedirectToAction("Privacy", "Home");
+                if (returnUri == null)
+                    return RedirectToAction("Privacy", "Home");
+                else
+                    return Redirect(returnUri);
             }
 
             return View();

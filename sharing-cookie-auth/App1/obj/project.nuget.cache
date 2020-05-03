@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h3F6qdCuyrHSFwxGzNtltN5A+Zns35Eo0vMvQFG9Nu23xYJJsL1ng+aE4C0AbuKJ7arDBrLhe0PSmnfN/hR+HA==",
+  "dgSpecHash": "ff7B33PtRCXSwaerpQAyN4sTGXHQpZATJIpd68Qok/Um9K6EIieM7/em8+pOmIALnYquTMIB2+qK0vN9TFppQw==",
   "success": true,
-  "projectFilePath": "/Users/donmac/code/sharing-cookie-auth/App1/App1.csproj",
+  "projectFilePath": "/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App1/App1.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

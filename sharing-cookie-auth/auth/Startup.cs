@@ -33,6 +33,7 @@ namespace auth
                     config.Cookie.Name = "vj_auth_local";
                     config.LoginPath = "/auth/login";
                     config.Cookie.Domain = "localhost";
+                    config.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
                 });
 
             services.AddDataProtection()

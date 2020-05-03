@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,11 +34,13 @@ namespace App1
                 {
                     config.Cookie.Name = "vj_auth_local";
                     config.Cookie.Domain = "localhost";
+                    config.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
                     config.Events = new CookieAuthenticationEvents()
                     {
                         OnRedirectToLogin = (context) =>
                         {
-                            context.HttpContext.Response.Redirect("http://localhost:5000/auth/login");
+
+                            context.HttpContext.Response.Redirect("http://localhost:5000/auth/login?returnUri=http://localhost:5002/home/privacy");//" + config.ReturnUrlParameter + "=" + context.RedirectUri);
                             return Task.CompletedTask;
                         }
                     };
