@@ -29,12 +29,16 @@ namespace auth
                     config.Cookie.Name = "vj_auth_local";
                     config.LoginPath = "/auth/login";
                     config.Cookie.Domain = "localhost";
+                    config.LogoutPath = "/auth/login";
                     config.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
                 });
 
             services.AddDataProtection()
                 .PersistKeysToFileSystem(GetKyRingDirectoryInfo())
                 .SetApplicationName("SharedCookieApp");
+
+            services.AddAntiforgery();
+
         }
 
         private DirectoryInfo GetKyRingDirectoryInfo()

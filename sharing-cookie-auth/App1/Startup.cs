@@ -34,8 +34,11 @@ namespace App1
                     {
                         OnRedirectToLogin = (context) =>
                         {
-
-                            context.HttpContext.Response.Redirect("http://localhost:5000/auth/login?returnUri=http://localhost:5002/home/privacy");//" + config.ReturnUrlParameter + "=" + context.RedirectUri);
+                            string returnUri = (context.Request.IsHttps) ? "https://" : "http://"
+                                + context.Request.Host
+                                + context.Request.Path;
+                            string loginUrl = Configuration.GetValue<string>("LoginUrl");
+                            context.HttpContext.Response.Redirect($"{loginUrl}?returnUri={returnUri}");
                             return Task.CompletedTask;
                         }
                     };
@@ -44,6 +47,8 @@ namespace App1
             services.AddDataProtection()
                 .PersistKeysToFileSystem(GetKyRingDirectoryInfo())
                 .SetApplicationName("SharedCookieApp");
+
+            services.AddAntiforgery();
         }
 
         private DirectoryInfo GetKyRingDirectoryInfo()
