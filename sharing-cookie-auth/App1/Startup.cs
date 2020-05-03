@@ -1,15 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc.Routing;
-using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -53,22 +48,13 @@ namespace App1
 
         private DirectoryInfo GetKyRingDirectoryInfo()
         {
-            string applicationBasePath = System.AppContext.BaseDirectory;
-            DirectoryInfo directoryInof = new DirectoryInfo(applicationBasePath);
             string keyRingPath = Configuration.GetSection("AppKeys").GetValue<string>("keyRingPath");
-            do
+            DirectoryInfo keyRingDirectoryInfo = new DirectoryInfo($"{keyRingPath}");
+            if (!keyRingDirectoryInfo.Exists)
             {
-                directoryInof = directoryInof.Parent;
-
-                DirectoryInfo keyRingDirectoryInfo = new DirectoryInfo($"{directoryInof.FullName}{keyRingPath}");
-                if (keyRingDirectoryInfo.Exists)
-                {
-                    return keyRingDirectoryInfo;
-                }
-
+                Directory.CreateDirectory(keyRingDirectoryInfo.FullName);
             }
-            while (directoryInof.Parent != null);
-            throw new Exception($"key ring path not found");
+            return keyRingDirectoryInfo;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

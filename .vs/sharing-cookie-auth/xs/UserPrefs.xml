@@ -1,6 +1,14 @@
-﻿<Properties StartupConfiguration="{80589587-6EAD-46E1-B308-3ECA82DCD59F}|Default">
+﻿<Properties StartupConfiguration="{228E94A0-D29E-4350-8DF1-911F63238576}|Default">
   <MonoDevelop.Ide.ItemProperties.auth PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.App1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="sharing-cookie-auth/auth/Startup.cs">
+    <Files>
+      <File FileName="sharing-cookie-auth/App1/Startup.cs" Line="53" Column="31" />
+      <File FileName="sharing-cookie-auth/auth/Startup.cs" Line="50" Column="1" />
+      <File FileName="sharing-cookie-auth/App1/Program.cs" Line="16" Column="1" />
+      <File FileName="sharing-cookie-auth/App1/appsettings.json" Line="1" Column="1" />
+      <File FileName="sharing-cookie-auth/auth/appsettings.json" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -15,7 +23,7 @@
               <Node name="Views" expanded="True">
                 <Node name="Auth" expanded="True" />
               </Node>
-              <Node name="appsettings.json" selected="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -26,7 +34,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/auth/Startup.cs" relfile="sharing-cookie-auth/auth/Startup.cs" line="43" column="1" />
+      <Breakpoint file="/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/auth/Controllers/AuthController.cs" relfile="sharing-cookie-auth/auth/Controllers/AuthController.cs" line="23" column="1" />
+      <Breakpoint file="/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/auth/Startup.cs" relfile="sharing-cookie-auth/auth/Startup.cs" line="52" column="1" />
+      <Breakpoint file="/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/auth/Startup.cs" relfile="sharing-cookie-auth/auth/Startup.cs" line="42" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
