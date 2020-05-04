@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "auth", "sharing-cookie-auth
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1", "sharing-cookie-auth\App1\App1.csproj", "{228E94A0-D29E-4350-8DF1-911F63238576}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App2", "sharing-cookie-auth\App2\App2.csproj", "{DC0EA7DA-D2C3-44BF-AB7A-265D5692DC9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{228E94A0-D29E-4350-8DF1-911F63238576}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{228E94A0-D29E-4350-8DF1-911F63238576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{228E94A0-D29E-4350-8DF1-911F63238576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0EA7DA-D2C3-44BF-AB7A-265D5692DC9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0EA7DA-D2C3-44BF-AB7A-265D5692DC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0EA7DA-D2C3-44BF-AB7A-265D5692DC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0EA7DA-D2C3-44BF-AB7A-265D5692DC9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
