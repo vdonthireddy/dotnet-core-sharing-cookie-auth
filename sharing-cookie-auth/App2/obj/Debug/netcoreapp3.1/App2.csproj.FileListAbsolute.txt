@@ -1,6 +1,7 @@
 /Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/appsettings.json
 /Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/Dockerfile
 /Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/App2.deps.json
 /Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/App2.runtimeconfig.json
 /Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/App2.runtimeconfig.dev.json
@@ -34,4 +35,3 @@
 /Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/obj/Debug/netcoreapp3.1/App2.pdb
 /Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/obj/Debug/netcoreapp3.1/App2.genruntimeconfig.cache
 /Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/obj/Debug/netcoreapp3.1/App2.csproj.CopyComplete
-/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App2/obj/Debug/netcoreapp3.1/App2.csprojAssemblyReference.cache

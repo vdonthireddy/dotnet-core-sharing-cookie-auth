@@ -53,7 +53,15 @@ namespace App2
 
         private DirectoryInfo GetKyRingDirectoryInfo()
         {
-            string keyRingPath = Configuration.GetSection("AppKeys").GetValue<string>("keyRingPath");
+            string keyRingPath = string.Empty;
+
+            keyRingPath = Environment.GetEnvironmentVariable("KEY_RING_PATH");
+
+            if (string.IsNullOrEmpty(keyRingPath))
+                keyRingPath = Configuration.GetSection("AppKeys").GetValue<string>("keyRingPath");
+
+            Console.WriteLine("Key Ring Path: " + keyRingPath);
+
             DirectoryInfo keyRingDirectoryInfo = new DirectoryInfo($"{keyRingPath}");
             if (!keyRingDirectoryInfo.Exists)
             {
@@ -75,7 +83,7 @@ namespace App2
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
