@@ -4,36 +4,36 @@ services:
   web-auth:
     image: auth
     build:
-      context: .
-      dockerfile: auth/Dockerfile
+      context: ./auth
+      dockerfile: Dockerfile
     volumes:
       - sharing-cookie-auth_keyring-conf:/app/keyRing
     ports:
-      - "5000:5000"
+      - "8435:8435"
     environment:
       KEY_RING_PATH: /app/keyRing
 
   web-app1:
     image: app1
     build:
-      context: .
-      dockerfile: App1/Dockerfile
+      context: ./App1
+      dockerfile: Dockerfile
     volumes:
       - sharing-cookie-auth_keyring-conf:/app/keyRing
     ports:
-      - "5001:5001"
+      - "8436:8436"
     environment:
       KEY_RING_PATH: /app/keyRing
 
   web-app2:
     image: app2
     build:
-      context: .
-      dockerfile: App2/Dockerfile
+      context: ./App2
+      dockerfile: Dockerfile
     volumes:
       - sharing-cookie-auth_keyring-conf:/app/keyRing
     ports:
-      - "5002:5002"
+      - "8437:8437"
     environment:
       KEY_RING_PATH: /app/keyRing
 
