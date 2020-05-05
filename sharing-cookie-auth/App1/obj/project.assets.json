@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App1/App1.csproj",
+      "projectUniqueName": "/Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App1/App1.csproj",
       "projectName": "App1",
-      "projectPath": "/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App1/App1.csproj",
+      "projectPath": "/Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App1/App1.csproj",
       "packagesPath": "/Users/donmac/.nuget/packages/",
-      "outputPath": "/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/App1/obj/",
+      "outputPath": "/Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App1/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

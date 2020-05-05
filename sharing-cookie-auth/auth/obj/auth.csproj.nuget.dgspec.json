@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/auth/auth.csproj": {}
+    "/Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/auth/auth.csproj": {}
   },
   "projects": {
-    "/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/auth/auth.csproj": {
+    "/Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/auth/auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/auth/auth.csproj",
+        "projectUniqueName": "/Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/auth/auth.csproj",
         "projectName": "auth",
-        "projectPath": "/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/auth/auth.csproj",
+        "projectPath": "/Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/auth/auth.csproj",
         "packagesPath": "/Users/donmac/.nuget/packages/",
-        "outputPath": "/Users/donmac/code/sharing-cookie-auth/sharing-cookie-auth/auth/obj/",
+        "outputPath": "/Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/auth/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
