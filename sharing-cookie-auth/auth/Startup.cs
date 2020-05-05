@@ -60,26 +60,6 @@ namespace auth
             return keyRingDirectoryInfo;
         }
 
-        //private DirectoryInfo GetKyRingDirectoryInfo()
-        //{
-        //    string applicationBasePath = System.AppContext.BaseDirectory;
-        //    DirectoryInfo directoryInof = new DirectoryInfo(applicationBasePath);
-        //    string keyRingPath = Configuration.GetSection("AppKeys").GetValue<string>("keyRingPath");
-        //    do
-        //    {
-        //        directoryInof = directoryInof.Parent;
-
-        //        DirectoryInfo keyRingDirectoryInfo = new DirectoryInfo($"{directoryInof.FullName}{keyRingPath}");
-        //        if (keyRingDirectoryInfo.Exists)
-        //        {
-        //            return keyRingDirectoryInfo;
-        //        }
-
-        //    }
-        //    while (directoryInof.Parent != null);
-        //    throw new Exception($"key ring path not found");
-        //}
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

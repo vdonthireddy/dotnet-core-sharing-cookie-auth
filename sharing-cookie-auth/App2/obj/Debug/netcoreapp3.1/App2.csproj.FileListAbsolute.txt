@@ -84,6 +84,7 @@
 /Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/App2.pdb
 /Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/App2.Views.dll
 /Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App2/bin/Debug/netcoreapp3.1/App2.Views.pdb
+/Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App2/obj/Debug/netcoreapp3.1/App2.csprojAssemblyReference.cache
 /Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App2/obj/Debug/netcoreapp3.1/App2.csproj.CoreCompileInputs.cache
 /Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App2/obj/Debug/netcoreapp3.1/App2.MvcApplicationPartsAssemblyInfo.cache
 /Users/donmac/code/dotnet-core-sharing-cookie-auth/sharing-cookie-auth/App2/obj/Debug/netcoreapp3.1/App2.RazorAssemblyInfo.cache
