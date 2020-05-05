@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.Extensions.Configuration;
+@inject IConfiguration config;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">App1</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">App2</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -22,13 +25,34 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><font color="red">Privacy</font></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Tax">Tax</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Tax"><font color="red">Tax</font></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
+                            <a class="nav-link text-dark" href="@config["SSOSites:authUrl"]">Auth</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@config["SSOSites:app1Url"]">App1</a>
+                        </li>
+                        <li class="nav-item text-muted ml-auto">
+                            Hello
+                            @if (User != null && User.Identity != null && User.Identity.IsAuthenticated && !String.IsNullOrEmpty(User.Identity.Name))
+                            {
+                                @User.Identity.Name
+                            }
+                            else
+                            {
+                                <i>anonymous</i>
+                            }
+                            !!!
+                        </li>
+                        <li class="nav-item ml-auto">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a class="nav-link text-dark" href="@config["logoutUrl"]">Logout</a>
+                            }
                         </li>
                     </ul>
                 </div>
@@ -43,7 +67,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - App1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - App2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

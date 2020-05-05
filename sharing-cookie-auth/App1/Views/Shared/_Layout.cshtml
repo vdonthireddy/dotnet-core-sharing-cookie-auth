@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.Extensions.Configuration;
+@inject IConfiguration config;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -22,13 +25,34 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><font color="red">Privacy</font></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Tax">Tax</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Tax"><font color="red">Tax</font></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
+                            <a class="nav-link text-dark" href="@config["SSOSites:authUrl"]">Auth</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@config["SSOSites:app2Url"]">App2</a>
+                        </li>
+                        <li class="nav-item text-muted ml-auto">
+                            Hello
+                            @if (User != null && User.Identity != null && User.Identity.IsAuthenticated && !String.IsNullOrEmpty(User.Identity.Name))
+                            {
+                                @User.Identity.Name
+                            }
+                            else
+                            {
+                                <i>anonymous</i>
+                            }
+                            !!!
+                        </li>
+                        <li class="nav-item ml-auto">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a class="nav-link text-dark" href="@config["logoutUrl"]">Logout</a>
+                            }
                         </li>
                     </ul>
                 </div>
@@ -40,12 +64,6 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - App1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

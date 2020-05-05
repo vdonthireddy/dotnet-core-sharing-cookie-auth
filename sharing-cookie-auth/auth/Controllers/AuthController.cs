@@ -4,6 +4,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,6 +12,12 @@ namespace auth.Controllers
 {
     public class AuthController : Controller
     {
+        private readonly IConfiguration _config;
+        public AuthController(IConfiguration configuration)
+        {
+            _config = configuration;
+        }
+
         [HttpGet]
         public IActionResult Login()
         {
@@ -20,13 +27,11 @@ namespace auth.Controllers
         [HttpPost]
         public IActionResult Login(string name, string returnUri = null)
         {
-            if (name == "Vijay")
+            if (!string.IsNullOrWhiteSpace(name))// == "Vijay")
             {
                 var claims = new List<Claim>()
                 {
-                    new Claim(ClaimTypes.Name, "vdonthireddy@gmail.com"),
-                    new Claim("FullName", "Vijay Donthireddy"),
-                    new Claim(ClaimTypes.Role, "Administrator"),
+                    new Claim(ClaimTypes.Name, name),
                 };
                 var authProperties = new AuthenticationProperties
                 {
@@ -49,9 +54,10 @@ namespace auth.Controllers
         }
 
         [HttpGet]
-        public void Logout()
+        public ActionResult Logout()
         {
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Redirect(_config.GetValue<string>("LoginUrl"));
         }
     }
 }
