@@ -1,6 +1,6 @@
 # What am I trying to achieve?
 
-### Two Objectives:
+### Two objectives:
 1. Cross Domain Cookie sharing in asp.net core to achieve SSO like functionality
 2. Containerizing all three apps (authentication, and two sample client apps) using Docker
 
