@@ -1,9 +1,9 @@
 # What am I trying to achieve?
-Two things
+### Two things
 1. Cross Domain Cookie sharing in asp.net core to achieve SSO like functionality
 2. Containerizing all three apps (authentication, and two sample client apps) using Docker
 
-## Please follow the steps below:
+### Please follow the steps below:
 1. Make sure your docker engine is running (to install Doker, go to https://docs.docker.com/engine/install/)
 2. Follow the steps to run all containers:
 ```
