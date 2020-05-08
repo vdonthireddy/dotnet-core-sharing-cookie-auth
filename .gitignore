@@ -1,2 +1,4 @@
 [B|]in
 [O|o]bj
+.vs/*
+.DS_Store
