@@ -27,8 +27,8 @@ namespace App1
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(config =>
                 {
-                    config.Cookie.Name = "vj_auth_local";
-                    config.Cookie.Domain = "localhost";
+                    config.Cookie.Name = Environment.GetEnvironmentVariable("AUTH_COOKIE_NAME");
+                    config.Cookie.Domain = Environment.GetEnvironmentVariable("AUTH_COOKIE_DOMAIN");
                     config.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
                     config.Events = new CookieAuthenticationEvents()
                     {
@@ -53,10 +53,7 @@ namespace App1
 
         private DirectoryInfo GetKyRingDirectoryInfo()
         {
-            string keyRingPath = string.Empty;
-
-            keyRingPath = Environment.GetEnvironmentVariable("KEY_RING_PATH");
-
+            string keyRingPath = Environment.GetEnvironmentVariable("KEY_RING_PATH");
             Console.WriteLine("Key Ring Path: " + keyRingPath);
 
             DirectoryInfo keyRingDirectoryInfo = new DirectoryInfo($"{keyRingPath}");
