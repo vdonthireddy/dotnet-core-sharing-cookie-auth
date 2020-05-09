@@ -10,10 +10,8 @@ services:
       - sharing-cookie-auth_keyring-conf:/app/keyRing
     ports:
       - "8435:8435"
-    environment:
-      KEY_RING_PATH: /app/keyRing
-      AUTH_COOKIE_NAME: "vj_cookie_auth_local"
-      AUTH_COOKIE_DOMAIN: "localhost"
+    env_file:
+      - ./.env
 
   web-app1:
     image: app1
@@ -24,10 +22,8 @@ services:
       - sharing-cookie-auth_keyring-conf:/app/keyRing
     ports:
       - "8436:8436"
-    environment:
-      KEY_RING_PATH: /app/keyRing
-      AUTH_COOKIE_NAME: "vj_cookie_auth_local"
-      AUTH_COOKIE_DOMAIN: "localhost"
+    env_file:
+      - ./.env
 
   web-app2:
     image: app2
@@ -38,10 +34,8 @@ services:
       - sharing-cookie-auth_keyring-conf:/app/keyRing
     ports:
       - "8437:8437"
-    environment:
-      KEY_RING_PATH: /app/keyRing
-      AUTH_COOKIE_NAME: "vj_cookie_auth_local"
-      AUTH_COOKIE_DOMAIN: "localhost"
+    env_file:
+      - ./.env
 
 volumes:
   sharing-cookie-auth_keyring-conf:
