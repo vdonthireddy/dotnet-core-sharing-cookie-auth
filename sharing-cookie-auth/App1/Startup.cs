@@ -57,9 +57,6 @@ namespace App1
 
             keyRingPath = Environment.GetEnvironmentVariable("KEY_RING_PATH");
 
-            if (string.IsNullOrEmpty(keyRingPath))
-                keyRingPath = Configuration.GetSection("AppKeys").GetValue<string>("keyRingPath");
-
             Console.WriteLine("Key Ring Path: " + keyRingPath);
 
             DirectoryInfo keyRingDirectoryInfo = new DirectoryInfo($"{keyRingPath}");
