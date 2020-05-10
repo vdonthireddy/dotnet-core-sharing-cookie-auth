@@ -7,7 +7,7 @@ services:
       context: ./auth
       dockerfile: Dockerfile
     volumes:
-      - sharing-cookie-auth_keyring-conf:/app/keyRing
+      - sharing-cookie-auth_keyring-conf:${KEY_RING_PATH}
     ports:
       - "8435:8435"
     env_file:
@@ -19,7 +19,7 @@ services:
       context: ./App1
       dockerfile: Dockerfile
     volumes:
-      - sharing-cookie-auth_keyring-conf:/app/keyRing
+      - sharing-cookie-auth_keyring-conf:${KEY_RING_PATH}
     ports:
       - "8436:8436"
     env_file:
@@ -31,7 +31,7 @@ services:
       context: ./App2
       dockerfile: Dockerfile
     volumes:
-      - sharing-cookie-auth_keyring-conf:/app/keyRing
+      - sharing-cookie-auth_keyring-conf:${KEY_RING_PATH}
     ports:
       - "8437:8437"
     env_file:
