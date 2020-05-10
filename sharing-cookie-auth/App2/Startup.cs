@@ -46,7 +46,7 @@ namespace App2
 
             services.AddDataProtection()
                 .PersistKeysToFileSystem(GetKyRingDirectoryInfo())
-                .SetApplicationName("SharedCookieApp");
+                .SetApplicationName(Environment.GetEnvironmentVariable("APPLICATION_NAME"));
 
             services.AddAntiforgery();
         }
@@ -54,8 +54,6 @@ namespace App2
         private DirectoryInfo GetKyRingDirectoryInfo()
         {
             string keyRingPath = Environment.GetEnvironmentVariable("KEY_RING_PATH");
-            Console.WriteLine("Key Ring Path: " + keyRingPath);
-
             DirectoryInfo keyRingDirectoryInfo = new DirectoryInfo($"{keyRingPath}");
             if (!keyRingDirectoryInfo.Exists)
             {
