@@ -13,3 +13,4 @@ cd dotnet-core-sharing-cookie-auth/
 cd sharing-cookie-auth
 bash allrun.sh
 ```
+![Design Document](design.jpg?raw=true "Design Document")
